@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Aura Jewelry Store</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, sans-serif;
+}
+
+body {
+background: #fffaf2;
+color: #333;
+}
+
+/* Navbar */
+header {
+background: #111;
+color: white;
+padding: 15px 8%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+.logo {
+font-size: 28px;
+font-weight: bold;
+color: gold;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+gap: 25px;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+}
+
+nav ul li a:hover {
+color: gold;
+}
+
+.menu-btn {
+display: none;
+font-size: 28px;
+cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+min-height: 90vh;
+background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1600&q=80");
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+padding: 0 8%;
+color: white;
+}
+
+.hero-content {
+max-width: 650px;
+}
+
+.hero-content h1 {
+font-size: 58px;
+margin-bottom: 20px;
+}
+
+.hero-content p {
+font-size: 20px;
+margin-bottom: 30px;
+line-height: 1.6;
+}
+
+.btn {
+background: gold;
+color: #111;
+padding: 14px 28px;
+border: none;
+border-radius: 30px;
+font-weight: bold;
+text-decoration: none;
+cursor: pointer;
+transition: 0.3s;
+display: inline-block;
+}
+
+.btn:hover {
+background: #d4a017;
+transform: scale(1.05);
+}
+
+/* Section Styling */
+section {
+padding: 70px 8%;
+}
+
+.section-title {
+text-align: center;
+font-size: 38px;
+margin-bottom: 15px;
+color: #111;
+}
+
+.section-subtitle {
+text-align: center;
+color: #777;
+margin-bottom: 45px;
+font-size: 17px;
+}
+
+/* Categories */
+.categories {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+}
+
+.category-card {
+background: white;
+padding: 30px;
+text-align: center;
+border-radius: 18px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+transition: 0.3s;
+}
+
+.category-card:hover {
+transform: translateY(-8px);
+}
+
+.category-card img {
+width: 100%;
+height: 190px;
+object-fit: cover;
+border-radius: 15px;
+margin-bottom: 20px;
+}
+
+.category-card h3 {
+color: #222;
+font-size: 22px;
+}
+
+/* Products */
+.products {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 25px;
+}
+
+.product-card {
+background: white;
+border-radius: 18px;
+overflow: hidden;
+box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+transition: 0.3s;
+position: relative;
+}
+
+.product-card:hover {
+transform: translateY(-8px);
+}
+
+.product-card img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+}
+
+.product-info {
+padding: 20px;
+text-align: center;
+}
+
+.product-info h3 {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+.price {
+color: #d4a017;
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.cart-btn {
+background: #111;
+color: white;
+padding: 11px 20px;
+border: none;
+border-radius: 25px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.cart-btn:hover {
+background: gold;
+color: #111;
+}
+
+/* About */
+.about {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+align-items: center;
+background: white;
+}
+
+.about img {
+width: 100%;
+border-radius: 20px;
+}
+
+.about-text h2 {
+font-size: 38px;
+margin-bottom: 20px;
+}
+
+.about-text p {
+line-height: 1.8;
+color: #555;
+font-size: 17px;
+margin-bottom: 20px;
+}
+
+/* Features */
+.features {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.feature-box {
+background: #111;
+color: white;
+padding: 35px;
+text-align: center;
+border-radius: 18px;
+}
+
+.feature-box h3 {
+color: gold;
+margin-bottom: 12px;
+font-size: 23px;
+}
+
+.feature-box p {
+line-height: 1.6;
+color: #ddd;
+}
+
+/* Contact */
+.contact {
+background: #111;
+color: white;
+}
+
+.contact .section-title {
+color: gold;
+}
+
+.contact-container {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+align-items: center;
+}
+
+.contact-info p {
+margin-bottom: 15px;
+font-size: 17px;
+}
+
+form {
+background: white;
+padding: 30px;
+border-radius: 18px;
+}
+
+form input,
+form textarea {
+width: 100%;
+padding: 14px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 8px;
+outline: none;
+}
+
+form textarea {
+height: 120px;
+resize: none;
+}
+
+form button {
+width: 100%;
+padding: 14px;
+background: gold;
+border: none;
+border-radius: 8px;
+font-weight: bold;
+cursor: pointer;
+}
+
+form button:hover {
+background: #d4a017;
+}
+
+/* Footer */
+footer {
+background: #000;
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+footer span {
+color: gold;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+.categories,
+.products {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.features {
+grid-template-columns: 1fr;
+}
+
+.about,
+.contact-container {
+grid-template-columns: 1fr;
+}
+
+.hero-content h1 {
+font-size: 45px;
+}
+}
+
+@media (max-width: 768px) {
+nav ul {
+position: absolute;
+top: 65px;
+right: 0;
+background: #111;
+width: 100%;
+flex-direction: column;
+text-align: center;
+display: none;
+padding: 20px 0;
+}
+
+nav ul.active {
+display: flex;
+}
+
+.menu-btn {
+display: block;
+}
+
+.hero-content h1 {
+font-size: 38px;
+}
+
+.hero-content p {
+font-size: 17px;
+}
+}
+
+@media (max-width: 576px) {
+header {
+padding: 15px 5%;
+}
+
+section {
+padding: 55px 5%;
+}
+
+.categories,
+.products {
+grid-template-columns: 1fr;
+}
+
+.hero {
+padding: 0 5%;
+text-align: center;
+}
+
+.hero-content h1 {
+font-size: 34px;
+}
+
+.section-title {
+font-size: 30px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+<div class="logo">Golden Aura</div>
+
+<nav>
+<ul id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#categories">Categories</a></li>
+<li><a href="#products">Products</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>Luxury Jewelry for Every Moment</h1>
+<p>
+Discover premium rings, necklaces, bracelets and earrings designed
+to make your special moments shine brighter.
+</p>
+<a href="#products" class="btn">Shop Now</a>
+</div>
+</section>
+
+<!-- Categories -->
+<section id="categories">
+<h2 class="section-title">Shop by Category</h2>
+<p class="section-subtitle">Choose your favorite jewelry collection</p>
+
+<div class="categories">
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" alt="Rings">
+<h3>Rings</h3>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" alt="Necklaces">
+<h3>Necklaces</h3>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80" alt="Bracelets">
+<h3>Bracelets</h3>
+</div>
+
+<div class="category-card">
+<img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="Earrings">
+<h3>Earrings</h3>
+</div>
+</div>
+</section>
+
+<!-- Products -->
+<section id="products">
+<h2 class="section-title">Featured Products</h2>
+<p class="section-subtitle">Elegant designs made with love</p>
+
+<div class="products">
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&w=800&q=80" alt="Diamond Ring">
+<div class="product-info">
+<h3>Diamond Ring</h3>
+<p class="price">250</p>
+<button class="cart-btn" onclick="addToCart('Diamond Ring')">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0?auto=format&fit=crop&w=800&q=80" alt="Gold Necklace">
+<div class="product-info">
+<h3>Gold Necklace</h3>
+<p class="price">450</p>
+<button class="cart-btn" onclick="addToCart('Gold Necklace')">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80" alt="Luxury Bracelet">
+<div class="product-info">
+<h3>Luxury Bracelet</h3>
+<p class="price">180</p>
+<button class="cart-btn" onclick="addToCart('Luxury Bracelet')">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&w=800&q=80" alt="Pearl Earrings">
+<div class="product-info">
+<h3>Pearl Earrings</h3>
+<p class="price">120</p>
+<button class="cart-btn" onclick="addToCart('Pearl Earrings')">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1602751584552-8ba73aad10e1?auto=format&fit=crop&w=800&q=80" alt="Silver Ring">
+<div class="product-info">
+<h3>Silver Ring</h3>
+<p class="price">90</p>
+<button class="cart-btn" onclick="addToCart('Silver Ring')">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=800&q=80" alt="Royal Necklace">
+<div class="product-info">
+<h3>Royal Necklace</h3>
+<p class="price">520</p>
+<button class="cart-btn" onclick="addToCart('Royal Necklace')">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1620656798579-1984d9e87df5?auto=format&fit=crop&w=800&q=80" alt="Golden Bangles">
+<div class="product-info">
+<h3>Golden Bangles</h3>
+<p class="price">300</p>
+<button class="cart-btn" onclick="addToCart('Golden Bangles')">Add to Cart</button>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1622398925373-3f91b1e275f5?auto=format&fit=crop&w=800&q=80" alt="Crystal Earrings">
+<div class="product-info">
+<h3>Crystal Earrings</h3>
+<p class="price">150</p>
+<button class="cart-btn" onclick="addToCart('Crystal Earrings')">Add to Cart</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+<div>
+<img src="https://images.unsplash.com/photo-1512163143273-bde0e3cc7407?auto=format&fit=crop&w=1000&q=80" alt="Jewelry Store">
+</div>
+
+<div class="about-text">
+<h2>About Golden Aura</h2>
+<p>
+Golden Aura is a premium online jewelry store offering beautifully
+crafted pieces for weddings, parties, gifts and everyday elegance.
+</p>
+<p>
+Our mission is to provide high-quality jewelry with modern designs,
+affordable prices and a smooth online shopping experience.
+</p>
+<a href="#contact" class="btn">Contact Us</a>
+</div>
+</section>
+
+<!-- Features -->
+<section>
+<h2 class="section-title">Why Choose Us?</h2>
+<p class="section-subtitle">We make your shopping experience better</p>
+
+<div class="features">
+<div class="feature-box">
+<h3>Premium Quality</h3>
+<p>Every jewelry piece is carefully selected and crafted with elegant finishing.</p>
+</div>
+
+<div class="feature-box">
+<h3>Fast Delivery</h3>
+<p>We deliver your favorite jewelry safely and quickly to your doorstep.</p>
+</div>
+
+<div class="feature-box">
+<h3>Secure Shopping</h3>
+<p>Enjoy a simple, safe and smooth online shopping experience.</p>
+</div>
+</div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+<h2 class="section-title">Contact Us</h2>
+<p class="section-subtitle">Have questions? Send us a message</p>
+
+<div class="contact-container">
+<div class="contact-info">
+<p><strong>Address:</strong> Karachi, Pakistan</p>
+<p><strong>Email:</strong> support@goldenaura.com</p>
+<p><strong>Phone:</strong> +92 300 1234567</p>
+<p><strong>Timing:</strong> Monday to Saturday, 10 AM - 8 PM</p>
+</div>
+
+<form onsubmit="sendMessage(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 <span>Golden Aura Jewelry</span>. All Rights Reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+document.getElementById("navLinks").classList.toggle("active");
+}
+
+function addToCart(productName) {
+alert(productName + " has been added to your cart!");
+}
+
+function sendMessage(event) {
+event.preventDefault();
+alert("Thank you! Your message has been sent.");
+}
+</script>
+
+</body>
+</html>
+
+</body>
+</html>
+</body>
+</html>
